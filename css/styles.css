@@ -18,6 +18,7 @@
     --backdrop-color: #00000032;
     --example-active-color: #2196F3E6;
     --work-description-color: #2F303ACC;
+    --modal-border-button:#0000001A;
 }
 
 body {
@@ -93,8 +94,28 @@ list-style: none;
 }
 
 .modal-button {
-    text-align: end;
+    position: absolute;
+    display: flex;
+    top: 8px;
+    right: 8px;
+    border: 1px solid var(--modal-border-button);
+    border-radius: 50%;
+    background-color: var(--body-background-color);
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    fill: var(--logo-primary-color);
+    padding: 0;
 
+}
+
+.modal-icon {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
 }
 
 
@@ -208,11 +229,6 @@ margin-right: 40px;
     margin-right: 10px;
 }
 
-.icon:hover,
-.icom:focus {
-    fill: var(--logo-secondary-color);
-}
-
 
 /*----------------------FOOTER----------------------*/
 
@@ -300,26 +316,20 @@ margin-bottom: 12px;
     background-color: var(--footer-icon-color);
     border-radius: 50%;
     color: var(--secondary-text-color);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);;
 }
 
 .footer-icon {
     width: 20px;
     height: 20px;
     fill: currentColor;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .footer-link:hover,
 .footer-link:focus {
-    color: var(--body-background-color);
     background-color: var(--logo-secondary-color);
 }
 
-.footer-icon:hover,
-.footer-icom:focus {
-    fill: var(--body-background-color);
-}
 
 /*----------------------MAIN STUDIO----------------------*/
 
@@ -518,7 +528,6 @@ margin-top: 16px;
     width: 20px;
     height: 20px;
     fill: currentColor;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link:hover,
@@ -527,10 +536,6 @@ margin-top: 16px;
     background-color: var(--logo-secondary-color);
 }
 
-.social-icon:hover,
-.social-icon:focus {
-    fill: var(--body-background-color);
-}
 
 .social-item {
     width: 44px;
@@ -551,26 +556,21 @@ gap: 30px;
     border: 1px solid var(--icon-color);
     border-radius: 4px;
     color: var(--icon-color);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-icon {
     width: 106px;
     height: 60px;
     fill: currentColor;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-link:hover,
 .client-link:focus {
     color: var(--logo-secondary-color);
-    border: 1px solid var(--logo-secondary-color);
+    border-color: var(--logo-secondary-color);
 }
 
-.client-icon:hover,
-.client-icon:focus {
-    fill: var(--logo-secondary-color);
-}
 
 /*----------------------MAIN PORTFOLIO----------------------*/
 
